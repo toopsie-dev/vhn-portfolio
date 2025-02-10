@@ -1,18 +1,25 @@
+import { BrowserRouter as Router } from "react-router";
 import { Header } from "./components/layouts/header";
+import { Sidebar } from "./components/layouts/Sidebar";
 import { SocialToggle } from "./components/layouts/SocialIcons";
 import { useThemeContext } from "./context/ThemeContext";
+import { AppRoutes } from "./routes";
 
 function App() {
-  const { theme, isOpen } = useThemeContext();
+  const { theme, isOpen, showSideBar } = useThemeContext();
 
   return (
-    <div className={`container ${theme}`}>
-      <Header />
-      {isOpen && <SocialToggle />}
-      <div className="background flex-center">
-        <div className="content-width"></div>
+    <Router>
+      <div className={`container ${theme}`}>
+        {/* Navigation component */}
+        <Header />
+        {showSideBar && <Sidebar />}
+        {isOpen && <SocialToggle />}
+
+        {/* Routes */}
+        <AppRoutes />
       </div>
-    </div>
+    </Router>
   );
 }
 

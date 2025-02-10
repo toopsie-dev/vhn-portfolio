@@ -6,6 +6,8 @@ interface ThemeContextType {
   setTheme: (theme: string) => void;
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
+  showSideBar: boolean;
+  setShowSideBar: (showSideBar: boolean) => void;
 }
 
 export const ThemeContext = createContext<ThemeContextType>({
@@ -13,6 +15,8 @@ export const ThemeContext = createContext<ThemeContextType>({
   setTheme: () => {}, // Placeholder function
   isOpen: false,
   setIsOpen: () => {},
+  showSideBar: false,
+  setShowSideBar: () => {},
 });
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
@@ -20,12 +24,15 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
 }) => {
   const [theme, setTheme] = useState("light");
   const [isOpen, setIsOpen] = useState(false); // Social media icons
+  const [showSideBar, setShowSideBar] = useState(false);
 
   const contextValue: ThemeContextType = {
     theme,
     setTheme,
     isOpen,
     setIsOpen,
+    showSideBar,
+    setShowSideBar,
   };
 
   return (

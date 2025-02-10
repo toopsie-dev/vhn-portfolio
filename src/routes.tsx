@@ -1,0 +1,20 @@
+import { Route, Routes } from "react-router";
+import { About } from "./components/About";
+import { Banner } from "./components/banner";
+import { Contact } from "./components/Contact";
+import { Projects } from "./components/Projects";
+import { Seminars } from "./components/Seminars";
+import { Skills } from "./components/Skills";
+
+export const AppRoutes = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<Banner />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/projects" element={<Projects />} />
+      <Route path="/skills" element={<Skills />} />
+      <Route path="/seminar" element={<Seminars />} />
+      <Route path="/contact" element={<Contact />} />
+    </Routes>
+  );
+};

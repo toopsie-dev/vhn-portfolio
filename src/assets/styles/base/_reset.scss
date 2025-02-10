@@ -10,7 +10,17 @@
 body {
   font-family: "Exo 2", serif;
 }
+ul {
+  @extend %flex;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
 
+// Theme style
 .light {
   .background {
     background-color: $navy-blue;
@@ -18,8 +28,7 @@ body {
   .text {
     color: $baby-blue;
   }
-} // Theme style
-
+}
 .dark {
   .background {
     background-color: $dark-800;
@@ -29,6 +38,7 @@ body {
   }
 }
 
+// Container
 .container {
   max-width: 1920px;
   width: 100%;
@@ -41,16 +51,16 @@ body {
     height: 100vh;
     padding: 0 50px;
   }
+  .flex-center {
+    @extend %flex;
+  }
 }
 
+// Display
 %flex {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.flex-center {
-  @extend %flex;
 }
 
 .flex-between {
@@ -72,6 +82,17 @@ body {
   from {
     opacity: 0;
     transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeLeftIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
   }
   to {
     opacity: 1;
