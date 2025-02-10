@@ -1,0 +1,11 @@
+.container {
+  padding: 30px 50px;
+  box-shadow: rgba(255, 255, 255, 0.02) 0px 3px 3px 0px;
+  position: fixed;
+}
+
+@media only screen and (max-width: 425px) and (min-width: 320px) {
+  .container {
+    padding: 30px;
+  }
+}

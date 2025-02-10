@@ -1,0 +1,63 @@
+@use "../abstracts/colors" as *;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.light {
+  .background {
+    background-color: $navy-blue;
+  }
+  .text {
+    color: $baby-blue;
+  }
+}
+
+.dark {
+  .background {
+    background-color: $dark-800;
+  }
+  .text {
+    color: $white;
+  }
+}
+
+.container {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  .content-width {
+    max-width: 1700px;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+    height: 100vh;
+    padding: 0 50px;
+  }
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  width: 33px;
+  height: 33px;
+}
+
+@media only screen and (max-width: 425px) and (min-width: 320px) {
+  .icon {
+    width: 28px;
+    height: 28px;
+  }
+}
