@@ -1,9 +1,14 @@
 @use "../abstracts/colors" as *;
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Exo 2", serif;
 }
 
 .light {
@@ -13,7 +18,7 @@
   .text {
     color: $baby-blue;
   }
-}
+} // Theme style
 
 .dark {
   .background {
@@ -29,7 +34,7 @@
   width: 100%;
   margin: 0 auto;
   .content-width {
-    max-width: 1700px;
+    max-width: 1440px;
     width: 100%;
     margin: 0 auto;
     min-height: 100vh;
@@ -38,26 +43,47 @@
   }
 }
 
-.flex-center {
+%flex {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.flex-center {
+  @extend %flex;
+}
+
 .flex-between {
-  display: flex;
+  @extend %flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .icon {
-  width: 33px;
-  height: 33px;
+  color: $white;
+  transform: scale(2.4);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(2);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @media only screen and (max-width: 425px) and (min-width: 320px) {
   .icon {
-    width: 28px;
-    height: 28px;
+    transform: scale(2.2);
+    &:hover {
+      transform: scale(1.8);
+    }
   }
 }

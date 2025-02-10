@@ -1,18 +1,16 @@
 import { Header } from "./components/layouts/header";
+import { SocialToggle } from "./components/layouts/SocialIcons";
 import { useThemeContext } from "./context/ThemeContext";
 
 function App() {
-  const { theme, setTheme } = useThemeContext();
+  const { theme, isOpen } = useThemeContext();
 
   return (
     <div className={`container ${theme}`}>
       <Header />
-      <div className="content-width background flex-center">
-        <h1 className="text">Hello Mabuhay!</h1>
-
-        <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
-          Toggle Theme
-        </button>
+      {isOpen && <SocialToggle />}
+      <div className="background flex-center">
+        <div className="content-width"></div>
       </div>
     </div>
   );
