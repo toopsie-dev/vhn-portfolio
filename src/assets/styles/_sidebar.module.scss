@@ -32,8 +32,7 @@
       border-bottom-right-radius: 50px;
       opacity: 0;
       cursor: pointer;
-      animation: fadeLeftIn 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-      transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+      @extend %fade-left-animation;
       box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 
       &:nth-child(1) {
