@@ -1,0 +1,92 @@
+@use "../styles/base/reset" as *;
+
+h3 {
+  font-size: 2.5em;
+}
+
+.project-card {
+  .project-image {
+    width: 500px;
+  }
+  h4 {
+    text-align: center;
+    font-size: 1.3em;
+  }
+}
+
+.project-image {
+  width: 600px;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .project-card {
+    .project-image {
+      width: 400px;
+    }
+  }
+  .content-width {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+
+    .left-container {
+      width: 100% !important;
+    }
+
+    .right-container {
+      width: 100% !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 426px) {
+  .project-card {
+    .project-image {
+      width: 300px;
+    }
+    h4 {
+      text-align: center;
+      font-size: 1em;
+    }
+  }
+  .content-width {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    padding-top: 120px !important;
+
+    .left-container {
+      width: 100% !important;
+    }
+
+    .right-container {
+      width: 100% !important;
+    }
+  }
+}
+@media only screen and (max-width: 426px) and (min-width: 320px) {
+  .project-card {
+    margin-top: 20px;
+    .project-image {
+      width: 300px;
+    }
+    h4 {
+      text-align: center;
+      font-size: 1em;
+    }
+  }
+  .project-image {
+    width: 350px;
+  }
+  .content-width {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    padding-top: 120px !important;
+
+    .left-container {
+      width: 100% !important;
+    }
+
+    .right-container {
+      width: 100% !important;
+    }
+  }
+}

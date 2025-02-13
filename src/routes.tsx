@@ -1,10 +1,11 @@
 import { Route, Routes } from "react-router";
 import { About } from "./components/About";
-import { Banner } from "./components/banner";
+import { Banner } from "./components/Banner";
 import { Contact } from "./components/Contact";
 import { Projects } from "./components/Projects";
 import { Seminars } from "./components/Seminars";
 import { Skills } from "./components/Skills";
+import { ProjectDetails } from "./components/projects/ProjectDetails";
 
 export const AppRoutes = () => {
   return (
@@ -15,6 +16,7 @@ export const AppRoutes = () => {
       <Route path="/skills" element={<Skills />} />
       <Route path="/seminar" element={<Seminars />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/project-details/:id" element={<ProjectDetails />} />
     </Routes>
   );
 };
