@@ -109,6 +109,7 @@ button {
     }
     .content {
       @extend %flex;
+      justify-content: space-between !important;
       flex-wrap: wrap;
     }
   }
@@ -170,6 +171,16 @@ button {
     transform: translateX(0);
   }
 }
+@media only screen and (max-width: 1440px) and (min-width: 1025px) {
+  .container {
+    .content-width {
+      .content {
+        justify-content: center !important;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
 
 @media only screen and (max-width: 1024px) and (min-width: 769px) {
   h1 {
@@ -186,6 +197,7 @@ button {
   }
   .container {
     .content-width {
+      justify-content: space-center !important;
       .left-container {
         p {
           font-size: 1.6em;

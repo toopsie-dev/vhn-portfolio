@@ -1,56 +1,93 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import style from "../../assets/styles/_project.module.scss";
+import { useProjectContext } from "../../context/ProjectContext";
+import { ProjectType } from "../../types";
 
 export const ProjectDetails = () => {
-  // const { id } = useParams();
+  const { projects, setSelectedProject } = useProjectContext();
+  const { id } = useParams();
+  const navigate = useNavigate();
   const location = useLocation();
-  const project = location.state?.project;
 
-  if (!project) {
-    return <p>Project not found</p>;
-  }
+  // Find project by ID
+  const project =
+    projects.find((proj) => proj.id === Number(id)) || location.state?.project;
+
+  if (!project) return <p>No project selected.</p>;
+
+  // Update selected project in context (optional)
+  useEffect(() => {
+    if (project) {
+      setSelectedProject(project); // ✅ Update state only inside useEffect
+    }
+  }, [project, setSelectedProject]);
+
+  // Find previous and next projects
+  const currentIndex = projects.findIndex((proj) => proj.id === project.id);
+  const prevProject = projects[currentIndex - 1] || null;
+  const nextProject = projects[currentIndex + 1] || null;
+
+  // Navigate to a new project
+  const handleNavigate = (newProject: ProjectType | null) => {
+    if (newProject) {
+      setSelectedProject(newProject);
+      navigate(`/project-details/${newProject.id}`, {
+        state: { project: newProject },
+      });
+    }
+  };
 
   return (
     <div className="background">
       <div className={`content-width flex-center ${style["content-width"]}`}>
         <div
-          className={`left-container flex-center ${style["left-container"]}`}
+          className={`left-container flex-column flex-center ${style["left-container"]}`}
         >
-          <img
-            src={project.image_url}
-            alt={project.title}
-            className={style["project-image"]}
-          />
+          <a
+            href={project.preview_link}
+            target="_blank"
+            className={style["image-wrapper"]}
+          >
+            <img
+              src={project.image_url}
+              alt={project.title}
+              className={style["project-image"]}
+            />
+            <div className={style["overlay"]}>
+              <p className="text">preview</p>
+            </div>
+          </a>
+          <div className={style["navigate"]}>
+            <IoIosArrowDropleft
+              onClick={() => handleNavigate(prevProject)}
+              className={`${style["arrow"]} ${style["arrow-left"]}`}
+            />
+            <IoIosArrowDropright
+              onClick={() => handleNavigate(nextProject)}
+              className={`${style["arrow"]} ${style["arrow-right"]}`}
+            />
+          </div>
         </div>
         <div
           className={`right-container flex-start flex-column ${style["right-container"]}`}
         >
           <h3 className="text">{project.title}</h3>
-          <h4 className="text">Client-Based Project</h4>
-          <p className="text paragraph">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, as opposed to using 'Content here, content
-            here', making it look like readable English. Many desktop publishing
-            packages and web page editors now use Lorem Ipsum as their default
-            model text, and a search for 'lorem ipsum' will uncover many web
-            sites still in their infancy.
-          </p>
+          <h4 className="text">{project.type}</h4>
+          <p className="text paragraph">{project.description}</p>
           <h4 className="text">tech stack : </h4>
           <ul>
-            <li>
-              <img src="/vite.svg" alt="" />
-            </li>
-            <li>
-              <img src="/vite.svg" alt="" />
-            </li>
-            <li>
-              <img src="/vite.svg" alt="" />
-            </li>
+            {project.tech_stack?.map((tech: string, index: number) => (
+              <li key={index}>
+                <img
+                  src={`/tech-stack/${tech}.png`}
+                  alt={tech}
+                  className={style["tech-stack-logo"]}
+                />
+              </li>
+            ))}
           </ul>
-          <button>Preview</button>
         </div>
       </div>
     </div>

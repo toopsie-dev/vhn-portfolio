@@ -1,18 +1,10 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useState } from "react";
-
-interface ThemeContextType {
-  theme: string;
-  setTheme: (theme: string) => void;
-  isOpen: boolean;
-  setIsOpen: (isOpen: boolean) => void;
-  showSideBar: boolean;
-  setShowSideBar: (showSideBar: boolean) => void;
-}
+import { ThemeContextType } from "../types";
 
 export const ThemeContext = createContext<ThemeContextType>({
   theme: "light",
-  setTheme: () => {}, // Placeholder function
+  setTheme: () => {},
   isOpen: false,
   setIsOpen: () => {},
   showSideBar: false,

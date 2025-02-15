@@ -1,5 +1,5 @@
 import { BrowserRouter as Router } from "react-router";
-import { Header } from "./components/layouts/header";
+import { Header } from "./components/layouts/Header";
 import { Sidebar } from "./components/layouts/Sidebar";
 import { SocialToggle } from "./components/layouts/SocialIcons";
 import { useThemeContext } from "./context/ThemeContext";

@@ -1,19 +1,17 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useNavigate } from "react-router-dom";
 import style from "../../assets/styles/_project.module.scss";
+import { useProjectContext } from "../../context/ProjectContext";
+import { ProjectType } from "../../types";
 
-interface ProjectCardProps {
-  project: {
-    id: number;
-    image_url: string;
-    title: string;
-  };
-}
-
-export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+export const ProjectCard = ({ project }: { project: ProjectType }) => {
   const navigate = useNavigate();
+  const { setSelectedProject } = useProjectContext();
 
   const handleClick = () => {
-    navigate(`/project-details/${project.id}`, { state: { project } });
+    setSelectedProject(project);
+    // navigate(`/project-details/${project.id}`, { state: { project } });
+    navigate(`/project-details/${project.id}`);
   };
 
   return (
