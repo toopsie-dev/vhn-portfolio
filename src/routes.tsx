@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router";
+import { Navigate, Route, Routes } from "react-router";
 import { About } from "./components/About";
 import { Banner } from "./components/Banner";
 import { Contact } from "./components/Contact";
@@ -12,6 +12,10 @@ export const AppRoutes = () => {
   return (
     <ProjectProvider>
       <Routes>
+        {/* Redirect /vhn-portfolio to / */}
+        <Route path="/vhn-portfolio" element={<Navigate to="/" replace />} />
+
+        {/* Main Routes */}
         <Route path="/" element={<Banner />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
@@ -19,6 +23,9 @@ export const AppRoutes = () => {
         <Route path="/seminar" element={<Seminars />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/project-details/:id" element={<ProjectDetails />} />
+
+        {/* Handle unknown paths */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </ProjectProvider>
   );
