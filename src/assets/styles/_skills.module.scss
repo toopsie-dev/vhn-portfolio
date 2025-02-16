@@ -1,0 +1,277 @@
+@use "../styles/base/reset" as *;
+@use "./abstracts/colors" as *;
+
+.content-width {
+  align-items: center;
+  h2 {
+    text-align: center;
+  }
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.tech-box {
+  @extend %flex;
+  flex-direction: column;
+  width: 180px;
+  height: 180px;
+  padding: 20px;
+  transition: 0.5s ease;
+  border-radius: 10px;
+  img {
+    width: 100px;
+    transition: 0.3s ease;
+  }
+  h6 {
+    font-size: 1em;
+    font-weight: 300;
+  }
+
+  &:hover {
+    background-color: $secondary;
+    img {
+      width: 90px;
+    }
+  }
+}
+
+// Modal
+.modal {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: 999;
+
+  .overlay {
+    @extend .modal;
+    background: rgba(49, 49, 49, 0.9);
+
+    .modal-content {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -30%);
+      line-height: 1.4;
+      background-color: $white;
+      padding: 80px 50px 50px 50px;
+      max-width: 1000px;
+      min-width: 500px;
+      border-radius: 10px;
+      @extend %flex;
+      gap: 50px;
+
+      .close-modal {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        transform: scale(3);
+        fill: $navy-blue;
+        transition: 0.5s ease;
+
+        &:hover {
+          transform: scale(3.2);
+        }
+      }
+
+      .left-container {
+        @extend %flex;
+        flex-direction: column;
+        width: 30%;
+        img {
+          width: 150px;
+        }
+
+        h3 {
+          font-size: 1.2em;
+        }
+      }
+
+      .right-container {
+        width: 70%;
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: start;
+          align-items: start;
+          column-gap: 50px;
+          row-gap: 20px;
+
+          span {
+            width: 40%;
+            li {
+              list-style-type: square;
+              list-style-position: outside;
+              font-size: 1.2em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.active-modal {
+  overflow-y: hidden;
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 1025px) {
+  .modal {
+    .overlay {
+      .modal-content {
+        gap: 60px;
+        .left-container {
+          width: 45%;
+        }
+
+        .right-container {
+          width: 55%;
+          ul {
+            flex-wrap: wrap;
+            span {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .modal {
+    .overlay {
+      .modal-content {
+        flex-direction: column;
+        gap: 30px;
+        padding: 50px;
+        .left-container {
+          width: 100%;
+
+          img {
+            width: 100px;
+          }
+        }
+
+        .right-container {
+          width: 100%;
+          ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            row-gap: 10px;
+            span {
+              width: 100%;
+              flex-wrap: wrap;
+              li {
+                font-size: 1em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 501px) {
+  .modal {
+    .overlay {
+      .modal-content {
+        flex-direction: column;
+        gap: 30px;
+        padding: 50px;
+        .left-container {
+          width: 100%;
+          img {
+            width: 100px;
+          }
+        }
+        .right-container {
+          width: 100%;
+          ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            row-gap: 10px;
+            span {
+              width: 100%;
+              flex-wrap: wrap;
+              li {
+                font-size: 0.9em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) and (min-width: 320px) {
+  .tech-box {
+    flex-direction: column;
+    width: 130px;
+    height: 130px;
+    padding: 20px;
+    transition: 0.5s ease;
+    border-radius: 10px;
+    img {
+      width: 70px;
+      transition: 0.3s ease;
+    }
+    h6 {
+      font-size: 1em;
+      font-weight: 300;
+    }
+
+    &:hover {
+      background-color: $secondary;
+      img {
+        width: 55px;
+      }
+    }
+  }
+
+  .modal {
+    .overlay {
+      .modal-content {
+        flex-direction: column;
+        gap: 30px;
+        padding: 50px;
+        min-width: 320px;
+        .left-container {
+          width: 100%;
+          img {
+            width: 80px;
+          }
+        }
+        .right-container {
+          width: 100%;
+          ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            row-gap: 10px;
+            span {
+              width: 100%;
+              flex-wrap: wrap;
+              li {
+                font-size: 0.9em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

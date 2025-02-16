@@ -11,18 +11,16 @@ export const ProjectDetails = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Find project by ID
   const project =
     projects.find((proj) => proj.id === Number(id)) || location.state?.project;
 
-  if (!project) return <p>No project selected.</p>;
-
-  // Update selected project in context (optional)
   useEffect(() => {
     if (project) {
-      setSelectedProject(project); // ✅ Update state only inside useEffect
+      setSelectedProject(project);
     }
   }, [project, setSelectedProject]);
+
+  if (!project) return <p>No project selected.</p>;
 
   // Find previous and next projects
   const currentIndex = projects.findIndex((proj) => proj.id === project.id);

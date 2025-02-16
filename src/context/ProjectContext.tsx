@@ -56,7 +56,7 @@ const initialProjects: ProjectType[] = [
     type: "company project",
     description:
       "During my internship at Gleent Company, I worked on a simple project using Laravel focused on file sorting management. The system featured different account controls, a dashboard displaying process counts, and sections for forms and meetings. It also included tables for all posts, processes, forms, and meetings. As an admin, users could modify departments for better organization. Additionally, I applied database management to ensure efficient data handling and system performance.",
-    tech_stack: ["laravel", "php", "mysql", "bootstrap", "css"],
+    tech_stack: ["laravel", "php", "mysql", "bootstrap", "css", "jquery"],
     preview_link: "https://filesorting.free.nf/",
   },
   {

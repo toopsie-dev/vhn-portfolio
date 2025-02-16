@@ -171,6 +171,7 @@ button {
     transform: translateX(0);
   }
 }
+
 @media only screen and (max-width: 1440px) and (min-width: 1025px) {
   .container {
     .content-width {
@@ -228,7 +229,7 @@ button {
   }
   .container {
     .content-width {
-      padding: 80px 50px;
+      padding: 100px 50px;
       .left-container {
         width: 100%;
         align-items: center;

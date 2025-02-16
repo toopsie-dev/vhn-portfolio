@@ -22,3 +22,18 @@ export interface ProjectContextType {
   selectedProject: ProjectType | null;
   setSelectedProject: (project: ProjectType | null) => void;
 }
+
+export interface TechStackType {
+  img_url: string;
+  title: string;
+  details: string[];
+}
+
+export interface SkillCardProps {
+  tech: TechStackType;
+}
+
+export interface SkillModalProps {
+  tech: SkillCardProps["tech"];
+  onClose: () => void;
+}

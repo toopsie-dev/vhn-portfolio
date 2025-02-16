@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useNavigate } from "react-router-dom";
 import style from "../../assets/styles/_project.module.scss";
 import { useProjectContext } from "../../context/ProjectContext";
@@ -10,7 +9,6 @@ export const ProjectCard = ({ project }: { project: ProjectType }) => {
 
   const handleClick = () => {
     setSelectedProject(project);
-    // navigate(`/project-details/${project.id}`, { state: { project } });
     navigate(`/project-details/${project.id}`);
   };
 
