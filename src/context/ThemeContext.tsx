@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useState } from "react";
-import { ThemeContextType } from "../types";
+import { ThemeContextType, ThemeType } from "../types";
 
 export const ThemeContext = createContext<ThemeContextType>({
   theme: "light",
@@ -14,7 +14,9 @@ export const ThemeContext = createContext<ThemeContextType>({
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState<ThemeType>(
+    () => (localStorage.getItem("theme") as ThemeType) || "light"
+  );
   const [isOpen, setIsOpen] = useState(false); // Social media icons
   const [showSideBar, setShowSideBar] = useState(false);
 

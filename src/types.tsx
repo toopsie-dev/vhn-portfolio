@@ -1,6 +1,8 @@
+export type ThemeType = "light" | "dark";
+
 export interface ThemeContextType {
-  theme: string;
-  setTheme: (theme: string) => void;
+  theme: ThemeType;
+  setTheme: (theme: ThemeType) => void;
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
   showSideBar: boolean;
