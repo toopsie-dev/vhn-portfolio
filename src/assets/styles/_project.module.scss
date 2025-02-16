@@ -91,6 +91,11 @@ h3 {
     .project-image {
       width: 400px;
     }
+    &:hover {
+      .project-image {
+        width: 380px;
+      }
+    }
   }
   .content-width {
     flex-wrap: wrap;
@@ -114,6 +119,11 @@ h3 {
     h4 {
       text-align: center;
       font-size: 1em;
+    }
+    &:hover {
+      .project-image {
+        width: 290px;
+      }
     }
   }
   .content-width {
@@ -139,6 +149,11 @@ h3 {
     h4 {
       text-align: center;
       font-size: 1em;
+    }
+    &:hover {
+      .project-image {
+        width: 290px;
+      }
     }
   }
   .project-image {

@@ -37,3 +37,14 @@ export interface SkillModalProps {
   tech: SkillCardProps["tech"];
   onClose: () => void;
 }
+
+export interface SeminarType {
+  img_url: string;
+  title: string;
+  description: string;
+  implemented: string;
+}
+
+export interface SeminarCardProps {
+  seminar: SeminarType;
+}
