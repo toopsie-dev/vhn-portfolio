@@ -15,7 +15,7 @@ export const Banner = () => {
           <button>View CV</button>
         </div>
         <div className="right-container flex-center">
-          <img src="/banner-img.png" alt="banner-img" className="banner-img" />
+          <img src="./banner-img.png" alt="banner-img" className="banner-img" />
         </div>
       </div>
     </div>
