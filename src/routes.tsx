@@ -17,12 +17,16 @@ export const AppRoutes = () => {
 
         {/* Main Routes */}
         <Route path="/" element={<Banner />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/seminar" element={<Seminars />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/project-details/:id" element={<ProjectDetails />} />
+        <Route path="/vhn-portfolio/" element={<Banner />} />
+        <Route path="/vhn-portfolio/about" element={<About />} />
+        <Route path="/vhn-portfolio/projects" element={<Projects />} />
+        <Route path="/vhn-portfolio/skills" element={<Skills />} />
+        <Route path="/vhn-portfolio/seminar" element={<Seminars />} />
+        <Route path="/vhn-portfolio/contact" element={<Contact />} />
+        <Route
+          path="/vhn-portfolio/project-details/:id"
+          element={<ProjectDetails />}
+        />
 
         {/* Handle unknown paths */}
         <Route path="*" element={<Navigate to="/" replace />} />
