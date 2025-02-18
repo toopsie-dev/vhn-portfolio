@@ -1,4 +1,4 @@
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import style from "../../assets/styles/_social-toggle.module.scss";
 
 export const SocialToggle = () => {
@@ -10,8 +10,8 @@ export const SocialToggle = () => {
         </a>
       </span>
       <span>
-        <a href="#" target="_blank">
-          <FaTwitter className="icon" />
+        <a href="https://github.com/toopsie-dev" target="_blank">
+          <FaGithub className="icon" />
         </a>
       </span>
       <span>

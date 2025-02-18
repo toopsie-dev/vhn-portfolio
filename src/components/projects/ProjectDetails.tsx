@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import style from "../../assets/styles/_project.module.scss";
@@ -74,6 +74,14 @@ export const ProjectDetails = () => {
           <h3 className="text">{project.title}</h3>
           <h4 className="text">{project.type}</h4>
           <p className="text paragraph">{project.description}</p>
+          {project.github_link && (
+            <React.Fragment>
+              <h4 className="text">gitHub link : </h4>
+              <a href={project.github_link} target="_blank" className="text">
+                {project.github_link}
+              </a>
+            </React.Fragment>
+          )}
           <h4 className="text">tech stack : </h4>
           <ul>
             {project.tech_stack?.map((tech: string, index: number) => (

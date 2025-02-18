@@ -17,6 +17,7 @@ export interface ProjectType {
   description: string;
   tech_stack: string[];
   preview_link: string;
+  github_link?: string;
 }
 
 export interface ProjectContextType {

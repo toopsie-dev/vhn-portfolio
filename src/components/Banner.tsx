@@ -1,6 +1,10 @@
 import style from "../assets/styles/_banner.module.scss";
 
 export const Banner = () => {
+  const handleRedirect = () => {
+    window.open("./CV-MelvinLilis.pdf", "_blank");
+  };
+
   return (
     <div className="background">
       <div
@@ -12,7 +16,7 @@ export const Banner = () => {
             I create elegantly simple designs and write code passionately,
             finding joy in my work.
           </p>
-          <button>View CV</button>
+          <button onClick={handleRedirect}>View CV</button>
         </div>
         <div className="right-container flex-center">
           <img src="./banner-img.png" alt="banner-img" className="banner-img" />

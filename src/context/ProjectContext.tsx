@@ -18,6 +18,7 @@ const initialProjects: ProjectType[] = [
       "Fitness Gym is my first personal project using React.js and Vite. It is a single-page application with various components and sections. It includes classes, achievements, different coaches, and information about fitness. The project also features different membership plans per month, a carousel placeholder for testimonials, a fitness blog with a hide-and-show feature, and a contact section.",
     tech_stack: ["reactjs", "vite", "css"],
     preview_link: "https://toopsie-dev.github.io/fitness/",
+    github_link: "https://github.com/toopsie-dev/fitness.git",
   },
   {
     id: 2,
@@ -28,6 +29,7 @@ const initialProjects: ProjectType[] = [
       "Pinnacle Law is my second project built with React.js and Vite, using modular CSS. I also incorporated TypeScript for the first time and enjoyed learning how it works. The project includes various sections such as services, areas of expertise, about us, a client testimonials carousel, and a contact section. Additionally, I implemented email functionality using EmailJS, allowing emails to be sent without a backend.",
     tech_stack: ["reactjs", "vite", "typescript", "css"],
     preview_link: "https://toopsie-dev.github.io/pinnacle-law/",
+    github_link: "https://github.com/toopsie-dev/pinnacle-law.git",
   },
   {
     id: 3,
@@ -58,6 +60,7 @@ const initialProjects: ProjectType[] = [
       "During my internship at Gleent Company, I worked on a simple project using Laravel focused on file sorting management. The system featured different account controls, a dashboard displaying process counts, and sections for forms and meetings. It also included tables for all posts, processes, forms, and meetings. As an admin, users could modify departments for better organization. Additionally, I applied database management to ensure efficient data handling and system performance.",
     tech_stack: ["laravel", "php", "mysql", "bootstrap", "css", "jquery"],
     preview_link: "https://filesorting.free.nf/",
+    github_link: "https://github.com/toopsie-dev/file-sorting-management.git",
   },
   {
     id: 6,
@@ -68,6 +71,7 @@ const initialProjects: ProjectType[] = [
       "Pokedex was my technical exam project at Multisys, where I developed a feature focused on capturing and managing Pokemon. The project aimed to replicate a functional Pokédex, allowing users to explore and track different Pokémon, their abilities, and attributes.",
     tech_stack: ["reactjs", "vite", "tailwind", "css"],
     preview_link: "#",
+    github_link: "https://github.com/toopsie-dev/tsx-pokedex.git",
   },
   {
     id: 7,
@@ -77,7 +81,8 @@ const initialProjects: ProjectType[] = [
     description:
       "This is my second portfolio, and I am currently using it to showcase my skills and projects. I built it using React.js and Vite, incorporating Sass for styling to achieve a clean and modern design. One of the key features of this portfolio is the dark/light theme toggle, allowing users to switch between themes for a better viewing experience. Working on this portfolio has been a great learning experience, allowing me to enhance my React skills while applying best practices in modern web development. I continuously update and improve it as I explore new technologies and techniques.",
     tech_stack: ["reactjs", "vite", "css", "sass"],
-    preview_link: "#",
+    preview_link: "https://toopsie-dev.github.io/vhn-portfolio/",
+    github_link: "https://github.com/toopsie-dev/vhn-portfolio.git",
   },
 ];
 
