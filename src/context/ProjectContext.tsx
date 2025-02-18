@@ -11,7 +11,7 @@ export const ProjectContext = createContext<ProjectContextType>({
 const initialProjects: ProjectType[] = [
   {
     id: 1,
-    image_url: "/Fitness-.png",
+    image_url: "./Fitness-.png",
     title: "Fitness Gym",
     type: "personal project",
     description:

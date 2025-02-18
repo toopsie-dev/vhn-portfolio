@@ -17,6 +17,7 @@ export const AppRoutes = () => {
 
         {/* Main Routes */}
         <Route path="/" element={<Banner />} />
+        {/* <Route path="/vhn-portfolio" element={<Banner />} /> */}
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/skills" element={<Skills />} />

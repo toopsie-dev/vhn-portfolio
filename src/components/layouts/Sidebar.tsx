@@ -15,39 +15,19 @@ export const Sidebar = () => {
         <Link to="/" onClick={handleHideSidebar} className="background">
           <li className="text">Home</li>
         </Link>
-        <Link
-          to="/vhn-portfolio/about"
-          onClick={handleHideSidebar}
-          className="background"
-        >
+        <Link to="/about" onClick={handleHideSidebar} className="background">
           <li className="text">About Me</li>
         </Link>
-        <Link
-          to="/vhn-portfolio/projects"
-          onClick={handleHideSidebar}
-          className="background"
-        >
+        <Link to="/projects" onClick={handleHideSidebar} className="background">
           <li className="text">Projects</li>
         </Link>
-        <Link
-          to="/vhn-portfolio/skills"
-          onClick={handleHideSidebar}
-          className="background"
-        >
+        <Link to="/skills" onClick={handleHideSidebar} className="background">
           <li className="text">Skills</li>
         </Link>
-        <Link
-          to="/vhn-portfolio/seminar"
-          onClick={handleHideSidebar}
-          className="background"
-        >
+        <Link to="/seminar" onClick={handleHideSidebar} className="background">
           <li className="text">Seminars</li>
         </Link>
-        <Link
-          to="/vhn-portfolio/contact"
-          onClick={handleHideSidebar}
-          className="background"
-        >
+        <Link to="/contact" onClick={handleHideSidebar} className="background">
           <li className="text">Contact</li>
         </Link>
       </ul>
