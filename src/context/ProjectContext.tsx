@@ -21,7 +21,7 @@ const initialProjects: ProjectType[] = [
   },
   {
     id: 2,
-    image_url: "/Pinnacle-.png",
+    image_url: "./Pinnacle-.png",
     title: "Pinnacle Law",
     type: "personal project",
     description:
@@ -31,7 +31,7 @@ const initialProjects: ProjectType[] = [
   },
   {
     id: 3,
-    image_url: "/Wordpress-.png",
+    image_url: "./Wordpress-.png",
     title: "My portfolio - Wordpress",
     type: "personal project",
     description:
@@ -41,7 +41,7 @@ const initialProjects: ProjectType[] = [
   },
   {
     id: 4,
-    image_url: "/Microforum-.png",
+    image_url: "./Microforum-.png",
     title: "Microforum",
     type: "client-based project",
     description:
@@ -51,7 +51,7 @@ const initialProjects: ProjectType[] = [
   },
   {
     id: 5,
-    image_url: "/Sorting-.png",
+    image_url: "./Sorting-.png",
     title: "File Sorting Management - Gleent",
     type: "company project",
     description:
@@ -61,7 +61,7 @@ const initialProjects: ProjectType[] = [
   },
   {
     id: 6,
-    image_url: "/Pokedex-.png",
+    image_url: "./Pokedex-.png",
     title: "Pokedex",
     type: "company technical exam",
     description:
@@ -71,7 +71,7 @@ const initialProjects: ProjectType[] = [
   },
   {
     id: 7,
-    image_url: "/Portfolio-.png",
+    image_url: "./Portfolio-.png",
     title: "Portfolio - current",
     type: "personal project",
     description:
