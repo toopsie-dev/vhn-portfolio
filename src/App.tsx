@@ -10,7 +10,7 @@ function App() {
 
   return (
     <Router>
-      <div className={`container ${theme}`}>
+      <div className={`container ${theme.replace(/"/g, "")}`}>
         {/* Navigation component */}
         <Header />
         {showSideBar && <Sidebar />}

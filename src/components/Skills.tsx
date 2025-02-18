@@ -58,6 +58,15 @@ export const Skills = () => {
       ],
     },
     {
+      title: "GitHub",
+      img_url: "./tech-stack/github.png",
+      details: [
+        "Basics (repositories, commits, branches, pull requests)",
+        "Collaboration (pull requests, code reviews)",
+        "Git commands related to GitHub?",
+      ],
+    },
+    {
       title: "JQuery",
       img_url: "./tech-stack/jquery.png",
       details: [

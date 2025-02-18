@@ -79,7 +79,7 @@ export const ProjectDetails = () => {
             {project.tech_stack?.map((tech: string, index: number) => (
               <li key={index}>
                 <img
-                  src={`/tech-stack/${tech}.png`}
+                  src={`./tech-stack/${tech}.png`}
                   alt={tech}
                   className={style["tech-stack-logo"]}
                 />
