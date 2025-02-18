@@ -9,42 +9,42 @@ import { SeminarCard } from "./seminar/SeminarCard";
 export const Seminars = () => {
   const seminars: SeminarType[] = [
     {
-      img_url: "/certificates/introduction-css.png",
+      img_url: "./certificates/introduction-css.png",
       title: "Introduction to CSS",
       description:
         "Fundamental technology used to style and format the layout of web pages. It works alongside HTML and JavaScript to create visually appealing and interactive web experiences.",
       implemented: "TESDA",
     },
     {
-      img_url: "/certificates/modern-web-framework.png",
+      img_url: "./certificates/modern-web-framework.png",
       title: "Model Web Framework 2021",
       description:
         "The choice of web framework in 2021 largely depended on factors such as programming language preference, project requirements, and development philosophy.",
       implemented: "Pamantasan ng Cabuyao",
     },
     {
-      img_url: "/certificates/mvc.png",
+      img_url: "./certificates/mvc.png",
       title: "ASP.NET Model-View-Controller",
       description:
         "Web application framework developed by Microsoft that follows the MVC architectural pattern. It provides a structured approach to building dynamic web applications by separating the application's concerns into three main components: Model, View, and Controller.",
       implemented: "Pamantasan ng Cabuyao",
     },
     {
-      img_url: "/certificates/cryptocurrency.png",
+      img_url: "./certificates/cryptocurrency.png",
       title: "Cryptocurrency as Digital Assets",
       description:
         "Cryptocurrencies share many characteristics with traditional financial assets, but their digital nature, decentralized operation, and unique properties make them a distinct category of digital assets in the modern financial landscape.",
       implemented: "Pamantasan ng Cabuyao",
     },
     {
-      img_url: "/certificates/setting-up-computer-service.png",
+      img_url: "./certificates/setting-up-computer-service.png",
       title: "Setting Up Computer Server",
       description:
         "Setting up a computer server can vary depending on your specific requirements, whether it's for hosting websites, applications, files, or providing network services. Here's a general guide to help you get started.		",
       implemented: "TESDA",
     },
     {
-      img_url: "/certificates/smart-android.png",
+      img_url: "./certificates/smart-android.png",
       title: "SMART Android Mobile Apps Development for Begginers",
       description:
         "Developing Android apps using the SMART approach can be a great way for beginners to get started. SMART stands for Simple, Measurable, Achievable, Relevant, and Time-bound, providing a structured approach to app development. Here's a beginner-friendly guide to SMART Android app development.		",

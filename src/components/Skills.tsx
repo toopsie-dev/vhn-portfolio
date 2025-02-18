@@ -7,7 +7,7 @@ export const Skills = () => {
   const techStack: TechStackType[] = [
     {
       title: "React JS",
-      img_url: "/tech-stack/reactjs.png",
+      img_url: "./tech-stack/reactjs.png",
       details: [
         "React Lifecycle Methods",
         "Hooks in React",
@@ -18,7 +18,7 @@ export const Skills = () => {
     },
     {
       title: "Vite",
-      img_url: "/tech-stack/vite.png",
+      img_url: "./tech-stack/vite.png",
       details: [
         "Adding CSS and Assets",
         "Installing and Using Vite with React",
@@ -27,7 +27,7 @@ export const Skills = () => {
     },
     {
       title: "TypeScript",
-      img_url: "/tech-stack/typescript.png",
+      img_url: "./tech-stack/typescript.png",
       details: [
         "Installing TypeScript",
         "Basic TypeScript Features",
@@ -37,7 +37,7 @@ export const Skills = () => {
     },
     {
       title: "Tailwind",
-      img_url: "/tech-stack/tailwind.png",
+      img_url: "./tech-stack/tailwind.png",
       details: [
         "Installing Tailwind CSS in a React (Vite) Project",
         "Basic Tailwind Usage",
@@ -48,7 +48,7 @@ export const Skills = () => {
     },
     {
       title: "Sass",
-      img_url: "/tech-stack/sass.png",
+      img_url: "./tech-stack/sass.png",
       details: [
         "Installing Sass in a Project",
         "Basic Sass Features",
@@ -59,7 +59,7 @@ export const Skills = () => {
     },
     {
       title: "JQuery",
-      img_url: "/tech-stack/jquery.png",
+      img_url: "./tech-stack/jquery.png",
       details: [
         "Installing jQuery",
         "Basic jQuery Features",
@@ -71,7 +71,7 @@ export const Skills = () => {
     },
     {
       title: "JavaScript",
-      img_url: "/tech-stack/js.png",
+      img_url: "./tech-stack/js.png",
       details: [
         "Basic JavaScript Features",
         "Functions & Arrow Functions",
@@ -85,7 +85,7 @@ export const Skills = () => {
     },
     {
       title: "Bootstrap",
-      img_url: "/tech-stack/bootstrap.png",
+      img_url: "./tech-stack/bootstrap.png",
       details: [
         "Installing Bootstrap",
         "Bootstrap Grid System (Responsive Layouts)",
@@ -96,7 +96,7 @@ export const Skills = () => {
     },
     {
       title: "CSS",
-      img_url: "/tech-stack/css.png",
+      img_url: "./tech-stack/css.png",
       details: [
         "Ways to Apply CSS",
         "CSS Selectors",
@@ -108,7 +108,7 @@ export const Skills = () => {
     },
     {
       title: "Laravel",
-      img_url: "/tech-stack/laravel.png",
+      img_url: "./tech-stack/laravel.png",
       details: [
         "Installing Laravel",
         "Routing in Laravel",
@@ -120,7 +120,7 @@ export const Skills = () => {
     },
     {
       title: "PHP",
-      img_url: "/tech-stack/php.png",
+      img_url: "./tech-stack/php.png",
       details: [
         "PHP Control Structures",
         "PHP Functions",
@@ -132,7 +132,7 @@ export const Skills = () => {
     },
     {
       title: "MySQL",
-      img_url: "/tech-stack/mysql.png",
+      img_url: "./tech-stack/mysql.png",
       details: [
         "Installing MySQL",
         "MySQL Basic Commands",
@@ -145,7 +145,7 @@ export const Skills = () => {
     },
     {
       title: "WordPress",
-      img_url: "/tech-stack/wordpress.png",
+      img_url: "./tech-stack/wordpress.png",
       details: [
         "WordPress Installation Methods",
         "WordPress Dashboard Overview",
@@ -159,7 +159,7 @@ export const Skills = () => {
     },
     {
       title: "Elementor",
-      img_url: "/tech-stack/elementor.png",
+      img_url: "./tech-stack/elementor.png",
       details: [
         "Installing Elementor",
         "Install Elementor Pro (Premium Features)",
@@ -169,7 +169,7 @@ export const Skills = () => {
     },
     {
       title: "Photoshop",
-      img_url: "/tech-stack/photoshop.png",
+      img_url: "./tech-stack/photoshop.png",
       details: [
         "Essential Photoshop Tools & Features",
         "How to Remove a Background in Photoshop",
@@ -180,7 +180,7 @@ export const Skills = () => {
     },
     {
       title: "Webflow",
-      img_url: "/tech-stack/webflow.png",
+      img_url: "./tech-stack/webflow.png",
       details: [
         "Responsive Design Controls",
         "Webflow Interactions & Animations",
@@ -190,12 +190,12 @@ export const Skills = () => {
     },
     {
       title: "Figma",
-      img_url: "/tech-stack/figma.png",
+      img_url: "./tech-stack/figma.png",
       details: ["Figma Core Features", "Components & Variants"],
     },
     {
       title: "Microsoft Office",
-      img_url: "/tech-stack/microsoft-office.png",
+      img_url: "./tech-stack/microsoft-office.png",
       details: [
         "Microsoft Word (Word Processing)",
         "Microsoft Excel (Spreadsheets & Data Analysis)",

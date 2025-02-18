@@ -7,7 +7,7 @@ export const About = () => {
       <div className={`content-width flex-between ${style["about-container"]}`}>
         <div className="left-container flex-center flex-column">
           <img
-            src="/about-img.png"
+            src="./about-img.png"
             alt="banner-img"
             className="banner-img"
             loading="lazy"
